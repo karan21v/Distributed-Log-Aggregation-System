@@ -24,5 +24,5 @@ Coupled with an **Enterprise Network Operations Center (NOC) Dashboard**, this s
 
 **1. Clone the repository**
 ```bash
-git clone [https://github.com/yourusername/distributed-log-aggregator.git](https://github.com/yourusername/distributed-log-aggregator.git)
+git clone [https://github.com/karan21v/Distributed-Log-Aggregation-System)
 cd distributed-log-aggregator
