@@ -5,7 +5,7 @@ This project is an enterprise-grade **Distributed Log Aggregator** designed to h
 
 Coupled with an **Enterprise Network Operations Center (NOC) Dashboard**, this system provides real-time observability into network latency, processing throughput, and individual machine health within the distributed cluster.
 
-##  Core Features & Technical Achievements
+#  Core Features & Technical Achievements
 
 * **Min-Heap Jitter Buffer:** UDP does not guarantee chronological packet delivery. This server implements a priority queue (`heapq`) to sort incoming packets by their generation timestamp, re-sequencing the data stream before writing it to the disk.
 * **Dynamic Backpressure (Congestion Control):** To prevent memory exhaustion during a DDoS attack or network flood, the server enforces a strict `MAX_QUEUE` limit. Packets exceeding this limit are intentionally dropped at the network boundary, ensuring the server remains online.
