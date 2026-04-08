@@ -1,10 +1,6 @@
 # Distributed-Log-Aggregation-System
-![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
-![Architecture](https://img.shields.io/badge/Architecture-Producer%2FConsumer-orange)
-![Protocol](https://img.shields.io/badge/Protocol-UDP%20%28Port%209000%29-green)
-![Security](https://img.shields.io/badge/Security-Fernet%20Cryptography-red)
 
-## 📌 Project Overview
+##  Project Overview
 This project is an enterprise-grade **Distributed Log Aggregator** designed to handle high-throughput telemetry data from hundreds of remote nodes. Operating over the User Datagram Protocol (UDP) for maximum ingestion speed, the system solves the inherent challenges of UDP (packet loss and out-of-order delivery) using custom data structures and congestion control algorithms.
 
 Coupled with an **Enterprise Network Operations Center (NOC) Dashboard**, this system provides real-time observability into network latency, processing throughput, and individual machine health within the distributed cluster.
@@ -16,7 +12,7 @@ Coupled with an **Enterprise Network Operations Center (NOC) Dashboard**, this s
 * **Cryptographic Security:** All telemetry data is encrypted in transit using symmetric key encryption (`cryptography.fernet`), protecting system logs from packet sniffing.
 * **Dual-Pane Telemetry Visualization:** A 300+ line Tkinter dashboard featuring live Matplotlib charts, allowing administrators to compare the raw inbound stream against the processed verdict stream.
 
-## 🏗️ System Architecture
+##  System Architecture
 
 1. **The Producers (`generator.py`):** A multi-threaded simulation of distributed servers. Each thread securely transmits randomized log events (INFO, WARN, ERROR) over UDP.
 2. **The Aggregator (`server.py`):** The central consumer. It decrypts incoming packets, buffers them in a Min-Heap, calculates network jitter, and flushes sorted batches to an aggregated log file.
